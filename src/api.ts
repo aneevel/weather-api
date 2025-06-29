@@ -1,3 +1,4 @@
+import { fetchWeatherApi } from "openmeteo";
 import express, { Request, Response } from "express";
 import 'dotenv/config'
 

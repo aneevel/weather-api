@@ -18,6 +18,7 @@
     "dotenv": "^16.6.0",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
+    "openmeteo": "^1.2.0",
     "ts-node": "^10.9.2"
   }
 }
