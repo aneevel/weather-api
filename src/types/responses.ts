@@ -1,8 +1,8 @@
-namespace Response {
+export namespace ResponseTypes {
   /** 
    * Represents the directions wind may blow
   */
-  enum WindDirection {
+  export enum WindDirection {
     North = "North",
     Northeast = "Northeast",
     East = "East",
@@ -14,15 +14,15 @@ namespace Response {
   }
 
   /**
-   * Represents the weather data for a city for the current day
+   * Represents the weather data for a city at the current time
   */
   export type CityResponse = {
-    currentTemperature: number; // Celsius
-    highTemperature: number;    // Celsius
-    lowTemperature: number;     // Celsius
+    time: Date;
     humidity: number;           // Percentage (0 - 100)
-    chanceForRain: number;      // Percentage (0 - 100)
-    windSpeed: number;          // mp/h
+    temperature: number;        // Celsius
+    rain: number;            // Sum of rainfall in inches
+    snowfall: number;        // Sum of snowfall in inches
+    windSpeed: number;          // mph
     windDirection: WindDirection
   }
 }
