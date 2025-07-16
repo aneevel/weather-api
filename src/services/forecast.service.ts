@@ -1,8 +1,9 @@
 import { fetchWeatherApi } from "openmeteo";
 
-const getForecast = async (url: string, params: Object) => {
-  const responses = await fetchWeatherApi(url, params);
-  return responses;
-}
+export class ForecastService {
 
-module.exports = { getForecast };
+  static async getForecast(url: string, params: Object) {
+    const responses = await fetchWeatherApi(url, params);
+    return responses;
+  }
+}
